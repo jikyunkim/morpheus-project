@@ -1,0 +1,6 @@
+resource "task-set-task" "a65d724c-c9de-4091-a7e5-daf632108e2c" {
+  uuid = "a65d724c-c9de-4091-a7e5-daf632108e2c"
+  task = { name = "export-apache service start" }
+  taskOrder = 1
+  taskPhase = "operation"
+}

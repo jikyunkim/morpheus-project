@@ -1,0 +1,5 @@
+resource "task-set-task" "7f9c94bc-8d90-4d5e-b180-c9c38f25392a" {
+  uuid = "7f9c94bc-8d90-4d5e-b180-c9c38f25392a"
+  task = { name = "export-add test user" }
+  taskPhase = "operation"
+}

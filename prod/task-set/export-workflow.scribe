@@ -1,0 +1,14 @@
+resource "task-set" "export-workflow" {
+  name = "export-workflow"
+  uuid = "b4a6cbfb-2d4d-4408-b44e-0b4da16d00ae"
+  dateCreated = "2026-08-10T09:12:30.000Z"
+  labels = [ "prod" ]
+  lastUpdated = "2026-08-10T09:13:58.000Z"
+  platform = "linux"
+  taskSetTasks = [
+    { uuid = "7f9c94bc-8d90-4d5e-b180-c9c38f25392a" },
+    { uuid = "a65d724c-c9de-4091-a7e5-daf632108e2c" }
+  ]
+  taskSetType = "operation"
+  visibility = "public"
+}
