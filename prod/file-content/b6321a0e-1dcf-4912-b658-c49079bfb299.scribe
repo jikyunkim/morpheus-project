@@ -1,0 +1,6 @@
+resource "file-content" "b6321a0e-1dcf-4912-b658-c49079bfb299" {
+  uuid = "b6321a0e-1dcf-4912-b658-c49079bfb299"
+  content = "systemctl start apache2"
+  dateCreated = "2026-08-10T09:07:58.000Z"
+  lastUpdated = "2026-08-10T09:07:58.000Z"
+}
