@@ -1,0 +1,7 @@
+resource "option-type-list" "export-optionlist" {
+  name = "export-optionlist"
+  uuid = "0f786e67-8c24-4cdc-a089-e1890a895090"
+  initialDataset = "[{\"name\":\"Payme\",\"value\":\"payme\"},{\"name\":\"DesignEng\",\"value\":\"designeng\"},{\"name\":\"TestLaunch\",\"value\":\"testlaunch\"},{\"name\":\"RocketParts\",\"value\":\"rocketparts\"},{\"name\":\"Development\",\"value\":\"development\"}]"
+  labels = [ "prod" ]
+  type = "manual"
+}
