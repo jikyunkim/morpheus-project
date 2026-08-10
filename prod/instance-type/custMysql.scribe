@@ -1,0 +1,13 @@
+resource "instance-type" "custMysql" {
+  code = "custMysql"
+  name = "Custom MySQL"
+  uuid = "d1fc9cf3-e3c0-44a2-bbe7-5de03e7c88bb"
+  category = "sql"
+  deploymentService = ""
+  environmentPrefix = "CUSTOM_MYSQL"
+  labels = [ "prod" ]
+  layouts = [
+    { code = "3a7556e5-3fbf-4597-ade3-ff2c22a2a09d" },
+    { code = "9fa81549-d9e2-4c67-96af-258d919e817d" }
+  ]
+}

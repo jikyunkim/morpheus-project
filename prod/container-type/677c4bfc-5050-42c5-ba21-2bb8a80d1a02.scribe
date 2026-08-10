@@ -1,0 +1,15 @@
+resource "container-type" "677c4bfc-5050-42c5-ba21-2bb8a80d1a02" {
+  code = "677c4bfc-5050-42c5-ba21-2bb8a80d1a02"
+  name = "Custom Ubuntu 24.04 node"
+  uuid = "4027eec7-cc7c-4ec0-bc0a-a002caf4adfb"
+  containerVersion = "24.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "ubuntu2404"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.1.vm-19498" }
+}

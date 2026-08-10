@@ -1,0 +1,11 @@
+resource "instance-type-layout" "9fa81549-d9e2-4c67-96af-258d919e817d" {
+  code = "9fa81549-d9e2-4c67-96af-258d919e817d"
+  name = "MySQL 8.4"
+  uuid = "61ac6d55-c8e4-4544-96dd-046e6496b345"
+  instanceType = { code = "custMysql" }
+  instanceVersion = "8.4"
+  memoryRequirement = 2147483648
+  optionTypes = [ { code = "usernameInput" } ]
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "677c4bfc-5050-42c5-ba21-2bb8a80d1a02" } ]
+}

@@ -1,0 +1,12 @@
+resource "option-type" "usernameInput" {
+  code = "usernameInput"
+  name = "Username Input"
+  uuid = "9e1c6fb5-b12d-4eb5-a80f-1858224b11f2"
+  config = { _retainDefault = "" }
+  description = "Username Input"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Your Name"
+  fieldName = "usernameInput"
+  labels = [ "aung" ]
+  required = true
+}
