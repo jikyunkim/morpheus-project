@@ -6,11 +6,11 @@ resource "task" "export-add test user" {
   labels = [ "prod" ]
   lastUpdated = "2026-08-10T08:41:33.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "a51da650-daa8-4334-8bf8-4c7997ebf6de" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
   visibility = "public"
