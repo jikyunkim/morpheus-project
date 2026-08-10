@@ -1,0 +1,17 @@
+resource "task" "export-add test user" {
+  name = "export-add test user"
+  uuid = "7ab2f57e-cd7d-4f95-912e-112c32cf584b"
+  dateCreated = "2026-08-10T08:41:32.000Z"
+  executeTarget = "resource"
+  labels = [ "prod" ]
+  lastUpdated = "2026-08-10T08:41:33.000Z"
+  options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
+    {
+      content = { uuid = "a51da650-daa8-4334-8bf8-4c7997ebf6de" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+  visibility = "public"
+}

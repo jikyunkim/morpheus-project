@@ -1,0 +1,6 @@
+resource "file-content" "a51da650-daa8-4334-8bf8-4c7997ebf6de" {
+  uuid = "a51da650-daa8-4334-8bf8-4c7997ebf6de"
+  content = "sudo useradd -m -d /home/testuser -s /bin/bash testuser && echo \"testuser:password\" | sudo chpasswd"
+  dateCreated = "2026-08-10T08:41:33.000Z"
+  lastUpdated = "2026-08-10T08:41:33.000Z"
+}
