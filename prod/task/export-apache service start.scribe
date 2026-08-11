@@ -6,11 +6,11 @@ resource "task" "export-apache service start" {
   labels = [ "prod" ]
   lastUpdated = "2026-08-10T09:07:58.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "b6321a0e-1dcf-4912-b658-c49079bfb299" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   taskType = { code = "script" }
 }
