@@ -1,0 +1,150 @@
+resource "catalog-item-type" "142125a6-3e75-44b8-abc4-1cf4584adbb7" {
+  name = "custom Rocket"
+  uuid = "142125a6-3e75-44b8-abc4-1cf4584adbb7"
+  category = "Application"
+  config = {
+    appSpec = <<EOFSCRIBE
+id: 12
+tiers:
+  App:
+    instances:
+      - instance:
+          type: custRocket
+          cloud: VMware Cloud
+          name: 'hpe-${accountId}-${sequence.toString().padLeft(2,''0'')}'
+          layout:
+            id: 317
+            code: d003cf61-1776-498b-b42a-7e019d59879d
+        cloud:
+          id: 1
+        userRemovedFields:
+          - backup.backupJob.retentionCount
+          - backup.backupJob.scheduleTypeId
+          - backup.backupJob.syntheticFullSchedule
+          - instance.backup
+          - backup.commvaultBackupSet
+          - backup.commvaultClient
+          - backup.commvaultStoragePolicy
+        backup:
+          backupJob:
+            syntheticFullEnabled: false
+          jobAction: new
+          providerBackupType: 12
+          veeamManagedServer: ''
+        config:
+          noAgent: false
+          vmwareFolderId: /
+          affinityGroup: ''
+          resourcePoolId: pool-2
+        ports:
+          - name: ''
+            port: ''
+            lb: ''
+        replicationGroup:
+          providerMethod: new
+        networkInterfaces:
+          - primaryInterface: true
+            network:
+              id: network-1
+              idName: VM Network
+        plan:
+          id: 202
+          code: vm-8192
+        resourcePool:
+          success: true
+          readOnly: false
+          refType: ComputeZone
+          refTypeId: 1
+          name: VMware Cloud
+        volumes:
+          - rootVolume: true
+            name: root
+            maxStorage: 85899345920
+            minStorage: 26843545600
+            controllerMountPoint: '740:0:6:0'
+            size: 80
+            virtualImageId: 311
+            datastoreId: auto
+            storageType: 1
+            maxIOPS: null
+    tierIndex: 1
+  Database:
+    instances:
+      - instance:
+          type: custMysql
+          cloud: VMware Cloud
+          name: 'hpe-${accountId}-${sequence.toString().padLeft(2,''0'')}'
+          layout:
+            id: 315
+            code: 3a7556e5-3fbf-4597-ade3-ff2c22a2a09d
+        cloud:
+          id: 1
+        userRemovedFields:
+          - backup.backupJob.retentionCount
+          - backup.backupJob.scheduleTypeId
+          - backup.backupJob.syntheticFullSchedule
+          - instance.backup
+          - backup.commvaultBackupSet
+          - backup.commvaultStoragePolicy
+          - backup.commvaultClient
+        backup:
+          backupJob:
+            syntheticFullEnabled: false
+          jobAction: new
+          providerBackupType: 12
+          veeamManagedServer: ''
+        config:
+          noAgent: false
+          vmwareFolderId: /
+          affinityGroup: ''
+          resourcePoolId: pool-2
+          customOptions:
+            usernameInput: aaa
+        ports:
+          - name: ''
+            port: ''
+            lb: ''
+        replicationGroup:
+          providerMethod: new
+        networkInterfaces:
+          - primaryInterface: true
+            network:
+              id: network-1
+              idName: VM Network
+        plan:
+          id: 204
+          code: vm-24576
+        resourcePool:
+          success: true
+          readOnly: false
+          refType: ComputeZone
+          refTypeId: 1
+          name: VMware Cloud
+        volumes:
+          - rootVolume: true
+            name: root
+            maxStorage: 257698037760
+            minStorage: 26843545600
+            controllerMountPoint: '740:0:6:0'
+            size: 240
+            virtualImageId: 311
+            datastoreId: auto
+            storageType: 1
+            maxIOPS: null
+    tierIndex: 2
+defaultCloud:
+  id: 1
+  code: ''
+name: Rocket App
+group:
+  id: 2
+  code: ''
+type: morpheus
+
+EOFSCRIBE
+  }
+  dateCreated = "2026-08-11T08:18:25.000Z"
+  labels = [ "prod" ]
+  lastUpdated = "2026-08-11T08:18:25.000Z"
+  refType = "AppTemplate"
+}
