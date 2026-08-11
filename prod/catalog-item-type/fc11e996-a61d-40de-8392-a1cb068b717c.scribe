@@ -1,0 +1,19 @@
+resource "catalog-item-type" "fc11e996-a61d-40de-8392-a1cb068b717c" {
+  name = "custom LAMP"
+  uuid = "fc11e996-a61d-40de-8392-a1cb068b717c"
+  category = "Automation"
+  config = {
+    config = ""
+    context = "instance"
+    workflowUuid = "c24eca43-96e3-4152-9040-43eee5ef6d8f"
+  }
+  content = "This workflow must be run on an Ubuntu instance"
+  contentFormatted = <<EOFSCRIBE
+<p>This workflow must be run on an Ubuntu instance</p>
+
+EOFSCRIBE
+  dateCreated = "2026-08-11T08:10:32.000Z"
+  labels = [ "prod" ]
+  lastUpdated = "2026-08-11T08:11:07.000Z"
+  refType = "OperationalWorkflow"
+}
