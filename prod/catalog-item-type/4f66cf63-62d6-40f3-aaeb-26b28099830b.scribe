@@ -1,0 +1,95 @@
+resource "catalog-item-type" "4f66cf63-62d6-40f3-aaeb-26b28099830b" {
+  name = "Custom Ubuntu"
+  uuid = "4f66cf63-62d6-40f3-aaeb-26b28099830b"
+  category = "OS"
+  config = {
+    name = "hpe-$${accountId}-$${sequence.toString().padLeft(2,'0')}"
+    backup = {
+      backupJob = {
+        retentionCount = null
+        scheduleTypeId = null
+        syntheticFullEnabled = false
+        syntheticFullSchedule = null
+      }
+      createBackup = true
+      jobAction = "new"
+      providerBackupType = 12
+      veeamManagedServer = ""
+    }
+    cloud = { name = "VMware Cloud", id = 1 }
+    config = {
+      affinityGroup = ""
+      createUser = false
+      customOptions = { usernameInput = "aaa" }
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = false
+      poolProviderType = null
+      resourcePoolId = "pool-2"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = false
+    group = { name = "test", id = "2" }
+    hasImage = false
+    hideLock = true
+    hostName = "hpe-$${accountId}-$${sequence.toString().padLeft(2,'0')}"
+    instance = { userGroup = { id = "" } }
+    layout = { code = "355487c8-8aab-4957-9b3c-a34363bee336", id = 314 }
+    networkInterfaces = [
+      {
+        network = {
+          hasPool = false
+          id = "network-1"
+          idName = "VM Network"
+        }
+        primaryInterface = true
+        showNetworkDhcpLabel = true
+        showNetworkPoolLabel = false
+      }
+    ]
+    plan = { code = "vm-24576", id = 204 }
+    ports = [
+      {
+        code = "ubuntu.22"
+        name = "SSH"
+        externalPort = 22
+        id = 3
+        internalPort = 22
+        loadBalance = false
+        loadBalancePort = null
+        loadBalanceProtocol = null
+        shortName = "ssh"
+        sortOrder = 1
+        visible = true
+      }
+    ]
+    replicationGroup = { providerMethod = "new" }
+    showScale = false
+    type = "custUbuntu"
+    version = "Development"
+    volumes = [
+      {
+        name = "root"
+        controllerMountPoint = "740:0:6:0"
+        datastoreId = "auto"
+        maxIOPS = null
+        maxStorage = 257698037760
+        minStorage = 26843545600
+        readonlyName = false
+        rootVolume = true
+        size = 240
+        storageType = 1
+        vId = 311
+        virtualImageId = 311
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2026-08-11T07:56:53.000Z"
+  labels = [ "prod" ]
+  lastUpdated = "2026-08-11T07:57:07.000Z"
+  refType = "InstanceType"
+}
